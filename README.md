@@ -70,9 +70,8 @@ Contribuir
 - Abrir un issue o pull request en el repositorio remoto.
 - Mantener la convención de inyección de dependencias en `MauiProgram.cs` y la convención de serialización (snake_case) a menos que se acuerde cambiarla en todo el proyecto.
 
-Licencia
-- Añadir un fichero `LICENSE` según la licencia que desees usar (p.ej. MIT).
+
 
 Contacto / notas finales
 - El proyecto depende del backend; pruebas end-to-end requieren la API activa y accesible desde el dispositivo/emulador seleccionado.
-- Si quieres, puedo generar un `launch`/`run` guide específico para Android/iOS o un checklist para preparar el backend (CORS, formatos JSON, datos de ejemplo).
+
