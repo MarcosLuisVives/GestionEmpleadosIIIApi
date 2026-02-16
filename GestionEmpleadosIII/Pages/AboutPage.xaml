@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionEmpleadosIII.Pages.AboutPage"
+             Title="Acerca de"
+             BackgroundColor="{AppThemeBinding Light=#F5F5F7, Dark=#121212}">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="30,40">
+
+            <Border StrokeShape="RoundRectangle 20"
+                    HeightRequest="120"
+                    WidthRequest="120"
+                    HorizontalOptions="Center"
+                    StrokeThickness="0">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Offset="0,10" Radius="15" Opacity="0.1" />
+                </Border.Shadow>
+                <Image Source="dotnet_bot.png" 
+                       Aspect="AspectFit"
+                       Margin="10"/>
+            </Border>
+
+            <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
+                <Label Text="Gestión Empleados"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       TextColor="{AppThemeBinding Light=#212121, Dark=White}"/>
+
+                <Label Text="Versión 1.0.3"
+                       FontSize="14"
+                       TextColor="Gray"
+                       HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+            
+            <Border StrokeShape="RoundRectangle 15"
+                    Padding="20"
+                    StrokeThickness="0"
+                    BackgroundColor="{AppThemeBinding Light=White, Dark=#1E1E1E}">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Offset="0,5" Radius="10" Opacity="0.05" />
+                </Border.Shadow>
+
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Esta aplicación ha sido diseñada con .NET MAUI simulando la aplicacion de gestion en una empresa."
+                           FontSize="15"
+                           LineHeight="1.2"
+                           TextColor="{AppThemeBinding Light=#444, Dark=#BBB}"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <VerticalStackLayout Spacing="10">
+                <Button Text="Sitio Web Oficial"
+                        BackgroundColor="#512BD4"
+                        TextColor="White"
+                        CornerRadius="10" />
+
+                <Button Text="Contactar Soporte"
+                        BackgroundColor="Transparent"
+                        TextColor="{AppThemeBinding Light=#512BD4, Dark=#A294F9}"
+                        BorderColor="{AppThemeBinding Light=#512BD4, Dark=#A294F9}"
+                        BorderWidth="1"
+                        CornerRadius="10" />
+            </VerticalStackLayout>
+
+            <Label Text="© 2026 LuisVives"
+                   FontSize="12"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Gray"
+                   Margin="0,20,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

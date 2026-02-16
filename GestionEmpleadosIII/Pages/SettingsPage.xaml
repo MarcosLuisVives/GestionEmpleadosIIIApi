@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionEmpleadosIII.Pages.SettingsPage"
+             Title="SettingsPage">
+    <VerticalStackLayout Padding="30" Spacing="15" MaximumWidthRequest="400">
+        <Label Text="Apariencia" FontSize="18" FontAttributes="Bold" />
+
+        <Picker x:Name="CambiarTema"
+            Title="Selecciona un tema"
+                ItemsSource="{Binding Temas}"
+                SelectedItem="{Binding TemaSeleccionado, Mode=TwoWay}"/>
+    </VerticalStackLayout>
+</ContentPage>

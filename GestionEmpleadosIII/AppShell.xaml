@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="GestionEmpleadosIII.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:GestionEmpleadosIII.Pages"
+    Title="GestionEmpleadosIII">
+
+    <TabBar>
+
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate pages:MainPage}"
+            Route="MainPage" />
+
+        <Tab Title="Información">
+            <ShellContent
+                Title="Empleados"
+                ContentTemplate="{DataTemplate pages:EmplePage}"
+                Route="EmplePage" />
+
+            <ShellContent
+                Title="Departamentos"
+                ContentTemplate="{DataTemplate pages:DepartPage}"
+                Route="DepartPage" />
+
+            <ShellContent
+                Title="Sedes"
+                ContentTemplate="{DataTemplate pages:SedePage}"
+                Route="SedePage" />
+        </Tab>
+
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate pages:AboutPage}"
+            Route="AboutPage" />
+
+        <ShellContent
+            Title="Configuración"
+            ContentTemplate="{DataTemplate pages:SettingsPage}"
+            Route="ConfiguracionPage" />
+
+    </TabBar>
+
+</Shell>

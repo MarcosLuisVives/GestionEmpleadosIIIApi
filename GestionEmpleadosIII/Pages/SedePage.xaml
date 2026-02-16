@@ -1,0 +1,58 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionEmpleadosIII.Pages.SedePage"
+             Title="Gestión de Sedes"
+             BackgroundColor="{AppThemeBinding Light=#F5F5F5, Dark=#121212}">
+
+    <Grid ColumnDefinitions="*, *" ColumnSpacing="20" Padding="20">
+
+        <VerticalStackLayout Grid.Column="0" Spacing="10">
+            <Label Text="Sedes Registradas" FontSize="20" FontAttributes="Bold" Margin="0,0,0,10"/>
+
+            <CollectionView ItemsSource="{Binding Sedes}"
+                            SelectedItem="{Binding SedeSeleccionada}"
+                            SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="0,5" Padding="15" StrokeShape="RoundRectangle 8"
+                                BackgroundColor="{AppThemeBinding Light=White, Dark=#1E1E1E}">
+                            <Label Text="{Binding Nombre}" FontSize="16" VerticalOptions="Center"/>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+
+        <Border Grid.Column="1" 
+                Padding="30" 
+                StrokeShape="RoundRectangle 12"
+                BackgroundColor="{AppThemeBinding Light=White, Dark=#1E1E1E}"
+                VerticalOptions="Start">
+            <VerticalStackLayout Spacing="20">
+
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Nombre de la Sede" FontAttributes="Bold"/>
+                    <Entry Text="{Binding SedeForm.Nombre}" Placeholder="Ej: Sede Norte" />
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Spacing="10" Margin="0,20,0,0">
+                    <Button Text="Guardar" 
+                            Command="{Binding GuardarCommand}"
+                            BackgroundColor="{StaticResource Primary}" />
+
+                    <Button Text="Eliminar" 
+                            Command="{Binding EliminarCommand}"
+                            BackgroundColor="Transparent"
+                            TextColor="Red"
+                            IsVisible="{Binding EsEdicion}" />
+
+                    <Button Text="Cancelar / Limpiar" 
+                            Command="{Binding LimpiarFormularioCommand}"
+                            IsVisible="{Binding EsEdicion}"
+                            BackgroundColor="Transparent"
+                            TextColor="{AppThemeBinding Light=Gray, Dark=LightGray}"/>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
+</ContentPage>

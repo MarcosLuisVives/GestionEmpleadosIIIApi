@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionEmpleadosIII.Pages.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="25">
+
+            <VerticalStackLayout Spacing="4" Margin="0,20,0,10">
+                <Label Text="SISTEMA DE GESTIÓN" 
+                       FontSize="12" 
+                       TextColor="{DynamicResource Primary}" 
+                       FontAttributes="Bold" 
+                       CharacterSpacing="2"/>
+                <Label Text="Panel Corporativo" 
+                       FontSize="32" 
+                       FontAttributes="Bold" 
+                       TextColor="{DynamicResource TextPrimary}"/>
+            </VerticalStackLayout>
+
+            <Border StrokeShape="RoundRectangle 24"
+                    StrokeThickness="0"
+                    BackgroundColor="{DynamicResource Gray950}"
+                    Padding="24">
+                <Border.Shadow>
+                    <Shadow Brush="Black" Offset="0,10" Radius="20" Opacity="0.2" />
+                </Border.Shadow>
+
+                <Grid ColumnDefinitions="*, Auto">
+                    <VerticalStackLayout Spacing="8" VerticalOptions="Center">
+                        <Label Text="Sedes Globales" TextColor="Gray" FontSize="14"/>
+                        <Label Text="Operación Activa" TextColor="White" FontSize="22" FontAttributes="Bold"/>
+                        <Label Text="8 sedes en 3 países" TextColor="{DynamicResource Primary}" FontSize="13" FontAttributes="Bold"/>
+                    </VerticalStackLayout>
+                    <Label Grid.Column="1" Text="🌏" FontSize="54" VerticalOptions="Center"/>
+                </Grid>
+            </Border>
+
+            <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto" ColumnSpacing="20" RowSpacing="20">
+
+                <Border Grid.Row="0" Grid.Column="0" 
+                        StrokeShape="RoundRectangle 20" 
+                        StrokeThickness="0" 
+                        BackgroundColor="{DynamicResource Gray100}" 
+                        Padding="20">
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Offset="0,4" Radius="10" Opacity="0.1" />
+                    </Border.Shadow>
+                    <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
+                        <Border StrokeShape="RoundRectangle 30" StrokeThickness="0" BackgroundColor="{DynamicResource Primary}" Opacity="0.1" HeightRequest="60" WidthRequest="60"/>
+                        <Label Text="🤵" FontSize="28" Margin="0,-60,0,0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label Text="Empleados" FontAttributes="Bold" FontSize="16" TextColor="{DynamicResource TextPrimary}" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="1" 
+                        StrokeShape="RoundRectangle 20" 
+                        StrokeThickness="0" 
+                        BackgroundColor="{DynamicResource Gray100}" 
+                        Padding="20">
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Offset="0,4" Radius="10" Opacity="0.1" />
+                    </Border.Shadow>
+                    <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
+                        <Border StrokeShape="RoundRectangle 30" StrokeThickness="0" BackgroundColor="{DynamicResource Tertiary}" Opacity="0.1" HeightRequest="60" WidthRequest="60"/>
+                        <Label Text="🏣" FontSize="28" Margin="0,-60,0,0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label Text="Deptos." FontAttributes="Bold" FontSize="16" TextColor="{DynamicResource TextPrimary}" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="0" 
+                        StrokeShape="RoundRectangle 20" 
+                        StrokeThickness="0" 
+                        BackgroundColor="{DynamicResource Gray100}" 
+                        Padding="20">
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Offset="0,4" Radius="10" Opacity="0.1" />
+                    </Border.Shadow>
+                    <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
+                        <Border StrokeShape="RoundRectangle 30" StrokeThickness="0" BackgroundColor="Yellow" Opacity="0.1" HeightRequest="60" WidthRequest="60"/>
+                        <Label Text="💸" FontSize="28" Margin="0,-60,0,0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label Text="Sedes" FontAttributes="Bold" FontSize="16" TextColor="{DynamicResource TextPrimary}" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="1" 
+                        StrokeShape="RoundRectangle 20" 
+                        StrokeThickness="0" 
+                        BackgroundColor="{DynamicResource Gray100}" 
+                        Padding="20">
+                    <Border.Shadow>
+                        <Shadow Brush="Black" Offset="0,4" Radius="10" Opacity="0.1" />
+                    </Border.Shadow>
+                    <VerticalStackLayout Spacing="12" HorizontalOptions="Center">
+                        <Border StrokeShape="RoundRectangle 30" StrokeThickness="0" BackgroundColor="{DynamicResource Secondary}" Opacity="0.1" HeightRequest="60" WidthRequest="60"/>
+                        <Label Text="👎" FontSize="28" Margin="0,-60,0,0" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label Text="Reportes" FontAttributes="Bold" FontSize="16" TextColor="{DynamicResource TextPrimary}" HorizontalOptions="Center"/>
+                    </VerticalStackLayout>
+                </Border>
+            </Grid>
+
+            <Label Text="Actividad Reciente" FontAttributes="Bold" FontSize="20" TextColor="{DynamicResource TextPrimary}" Margin="0,10,0,0"/>
+
+            <Border StrokeShape="RoundRectangle 16" StrokeThickness="1" Stroke="{DynamicResource Gray200}" BackgroundColor="Transparent" Padding="16">
+                <HorizontalStackLayout Spacing="16">
+                    <BoxView WidthRequest="4" Color="{DynamicResource Primary}" CornerRadius="2"/>
+                    <VerticalStackLayout Spacing="2">
+                        <Label Text="Actualización de Sede Central" FontAttributes="Bold" FontSize="15" TextColor="{DynamicResource TextPrimary}"/>
+                        <Label Text="Sede Madrid modificada por Admin" TextColor="{DynamicResource Gray500}" FontSize="13"/>
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

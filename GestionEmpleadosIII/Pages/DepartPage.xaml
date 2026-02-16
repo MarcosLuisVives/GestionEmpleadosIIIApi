@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionEmpleadosIII.Pages.DepartPage"
+             Title="Departamentos">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Añadir" 
+                  Command="{Binding IrACrearCommand}" />
+    </ContentPage.ToolbarItems>
+
+    <Grid>
+        <CollectionView ItemsSource="{Binding Departamentos}"
+                     SelectedItem="{Binding DepartamentoSeleccionado}"
+                     SelectionMode="Single"
+                     ItemTemplate="{StaticResource CardDepart}">
+        </CollectionView>
+    </Grid>
+</ContentPage>

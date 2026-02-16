@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestionEmpleadosIII.Pages.DetalleEmpleadoPage"
+             Title="DetalleEmpleadoPage">
+    
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Image Source="{Binding EmpleadoDetalle.ImageUri}" HeightRequest="150" HorizontalOptions="Center" />
+
+        <Entry Text="{Binding EmpleadoDetalle.Nombre}" Placeholder="Nombre" />
+        <Entry Text="{Binding EmpleadoDetalle.Apellido}" Placeholder="Apellido" />
+        <Entry Text="{Binding EmpleadoDetalle.Edad}" Keyboard="Numeric" Placeholder="Edad" />
+        <Entry Text="{Binding EmpleadoDetalle.Genero}" Placeholder="Genero(F o M)"/>
+
+        <Entry Text="{Binding EmpleadoDetalle.DepartamentoId}" 
+           Placeholder="ID del Departamento"
+           Keyboard="Numeric"
+           IsReadOnly="{Binding EsEdicion}" />
+              
+
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Button Text="Guardar" 
+                Command="{Binding GuardarCommand}" 
+                BackgroundColor="Green" />
+
+            <Button Text="Eliminar" 
+                Command="{Binding EliminarCommand}" 
+                BackgroundColor="Red"
+                IsVisible="{Binding EsEdicion}" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>
