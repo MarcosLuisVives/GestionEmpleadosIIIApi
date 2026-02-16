@@ -8,6 +8,11 @@ Resumen rápido
 - API esperada: REST JSON en `http://localhost:8080/` (endpoints como `/empleados/`, `/departamentos/`, `/sedes/`)
 - Serialización: las llamadas usan una convención snake_case (ver `JsonSerializerOptions` en los servicios).
 
+<img width="1919" height="1004" alt="image" src="https://github.com/user-attachments/assets/94c0f18b-f949-48e6-bbc2-7a4a82453223" />
+
+
+<img width="1903" height="819" alt="image" src="https://github.com/user-attachments/assets/8cab4ee1-c9fe-437b-b92c-185234d9c382" />
+
 Requisitos
 - Visual Studio 2026 con el workload de .NET MAUI instalado.
 - SDK .NET correspondiente (net10).
@@ -69,8 +74,6 @@ Estilos y recursos
 Contribuir
 - Abrir un issue o pull request en el repositorio remoto.
 - Mantener la convención de inyección de dependencias en `MauiProgram.cs` y la convención de serialización (snake_case) a menos que se acuerde cambiarla en todo el proyecto.
-
-
 
 Contacto / notas finales
 - El proyecto depende del backend; pruebas end-to-end requieren la API activa y accesible desde el dispositivo/emulador seleccionado.
